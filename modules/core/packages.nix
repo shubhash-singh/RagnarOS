@@ -28,23 +28,16 @@
   };
 
   environment.systemPackages = with pkgs; [
-    amfora # Fancy Terminal Browser For Gemini Protocol
     appimage-run # Needed For AppImage Support
-    brave # Brave Browser
     brightnessctl # For Screen Brightness Control
     cmatrix # Matrix Movie Effect In Terminal
     cowsay # Great Fun Terminal Program
-    docker-compose # Allows Controlling Docker From A Single File
     duf # Utility For Viewing Disk Usage In Terminal
     eza # Beautiful ls Replacement
-    ffmpeg # Terminal Video / Audio Editing
-    ffmpegthumbnailer # Need For Video / Image Preview
     file-roller # Archive Manager
 
     gedit # Simple Graphical Text Editor
-    gimp # Great Photo Editor
     greetd.tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
-    htop # Simple Terminal Based System Monitor
     hyprpicker # Color Picker
     eog # For Image Viewing
     inxi # CLI System Information Tool
@@ -52,10 +45,8 @@
     libnotify # For Notifications
     libvirt # Needed For Virtualisation Support
     lm_sensors # Used For Getting Hardware Temps
-    lolcat # Add Colors To Your Terminal Command Output
     lshw # Detailed Hardware Information
     lxqt.lxqt-policykit # The Chosen Policy Kit / Polkit
-    mpv # Incredible Video Player
     ncdu # Disk Usage Analyzer With Ncurses Interface
     nixfmt-rfc-style # Nix Formatter
     pavucontrol # For Editing Audio Levels & Devices
@@ -68,26 +59,16 @@
     unrar # Tool For Handling .rar Files
     unzip # Tool For Handling .zip Files
     usbutils # Good Tools For USB Devices
-    v4l-utils # Used For Things Like OBS Virtual Camera
     virt-viewer # View Virtual Machines
     vscode-fhs
     wget # Tool For Fetching Files With Links
-    ytmdl # Tool For Downloading Audio From YouTube
     yazi
-
+    clipman # for clipboard
+    wl-clipboard # for clipboard list
     # Custom Applications
     # android-studio-full
     firefox
     github-desktop
     jetbrains-toolbox
-    # jetbrains.idea-ultimate
-   # obsidian
-   # zulu17
-   # python313
-    #mongodb
-    #dbgate
-    #mysql84
-    #qbittorrent
-    #postman
   ];
 }

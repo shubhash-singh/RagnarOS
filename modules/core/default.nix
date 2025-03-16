@@ -15,10 +15,10 @@
     ./starfish.nix
     ./steam.nix
     ./stylix.nix
-    ./syncthing.nix
+    # ./syncthing.nix
     ./system.nix
     ./user.nix
-    ./virtualisation.nix
+    # ./virtualisation.nix
     ./xdg.nix
     ./xserver.nix
     inputs.stylix.nixosModules.stylix

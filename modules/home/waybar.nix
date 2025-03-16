@@ -185,94 +185,108 @@ in
       style = concatStrings [
         ''
           * {
-            font-family: JetBrainsMono Nerd Font Mono;
-            font-size: 16px;
-            border-radius: 0px;
-            border: none;
-            min-height: 0px;
-          }
-          window#waybar {
-            background: rgba(0,0,0,0);
-          }
-          #workspaces {
-            color: #${config.lib.stylix.colors.base00};
-            background: #${config.lib.stylix.colors.base01};
-            margin: 4px 4px;
-            padding: 5px 5px;
-            border-radius: 16px;
-          }
-          #workspaces button {
-            font-weight: bold;
-            padding: 0px 5px;
-            margin: 0px 3px;
-            border-radius: 16px;
-            color: #${config.lib.stylix.colors.base00};
-            background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
-            opacity: 0.5;
-            transition: ${betterTransition};
-          }
-          #workspaces button.active {
-            font-weight: bold;
-            padding: 0px 5px;
-            margin: 0px 3px;
-            border-radius: 16px;
-            color: #${config.lib.stylix.colors.base00};
-            background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
-            transition: ${betterTransition};
-            opacity: 1.0;
-            min-width: 40px;
-          }
-          #workspaces button:hover {
-            font-weight: bold;
-            border-radius: 16px;
-            color: #${config.lib.stylix.colors.base00};
-            background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
-            opacity: 0.8;
-            transition: ${betterTransition};
-          }
-          tooltip {
-            background: #${config.lib.stylix.colors.base00};
-            border: 1px solid #${config.lib.stylix.colors.base08};
-            border-radius: 12px;
-          }
-          tooltip label {
-            color: #${config.lib.stylix.colors.base08};
-          }
-          #window, #cpu, #memory, #idle_inhibitor {
-            font-weight: bold;
-            margin: 4px 0px;
-            margin-left: 7px;
-            padding: 0px 18px;
-            background: #${config.lib.stylix.colors.base04};
-            color: #${config.lib.stylix.colors.base00};
-            border-radius: 24px 10px 24px 10px;
-          }
-          #custom-startmenu {
-            color: #${config.lib.stylix.colors.base0B};
-            background: #${config.lib.stylix.colors.base02};
-            font-size: 28px;
-            margin: 0px;
-            padding: 0px 30px 0px 15px;
-            border-radius: 0px 0px 40px 0px;
-          }
-          #custom-hyprbindings, #network, #battery,
-           #pulseaudio, #tray, #custom-exit {
-            font-weight: bold;
-            background: #${config.lib.stylix.colors.base04};
-            color: #${config.lib.stylix.colors.base00};
-            margin: 4px 0px;
-            margin-right: 7px;
-            border-radius: 10px 24px 10px 24px;
-            padding: 0px 18px;
-          }
-          #clock, #custom-notification{
-            font-weight: bold;
-            color: #0D0E15;
-            background: linear-gradient(90deg, #${config.lib.stylix.colors.base0E}, #${config.lib.stylix.colors.base0C});
-            margin: 4px 0px;
-            padding: 5px 30px;
-            border-radius: 30px 30px 30px 30px;
-          }
+  font-family: JetBrainsMono Nerd Font Mono;
+  font-size: 16px;
+  border-radius: 0px;
+  border: none;
+  min-height: 0px;
+  color: #ffffff;
+}
+
+window#waybar {
+  background:rgba(0, 0, 0, 0);
+}
+
+#workspaces {
+  color: #ffffff;
+  background: #0a0a40;
+  margin: 4px 4px;
+  padding: 5px 5px;
+  border-radius: 16px;
+}
+
+#workspaces button {
+  font-weight: bold;
+  padding: 0px 5px;
+  margin: 0px 3px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: linear-gradient(45deg, #001e44, #0b003b);
+  opacity: 0.5;
+  transition: ${betterTransition};
+}
+
+#workspaces button.active {
+  font-weight: bold;
+  padding: 0px 5px;
+  margin: 0px 3px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: linear-gradient(45deg, #001a66, #002080);
+  transition: ${betterTransition};
+  opacity: 1.0;
+  min-width: 40px;
+}
+
+#workspaces button:hover {
+  font-weight: bold;
+  border-radius: 16px;
+  color: #ffffff;
+  background: linear-gradient(45deg, #001a66, #002080);
+  opacity: 0.8;
+  transition: ${betterTransition};
+}
+
+tooltip {
+  background: #0a0a40;
+  border: 1px solid #001a66;
+  border-radius: 12px;
+}
+
+tooltip label {
+  color: #ffffff;
+}
+
+#window, #cpu, #memory, #idle_inhibitor {
+  font-weight: bold;
+  margin: 4px 0px;
+  margin-left: 7px;
+  padding: 0px 18px;
+  background: #0b003b;
+  color: #ffffff;
+  border-radius: 24px 10px 24px 10px;
+}
+
+#custom-startmenu {
+  color: #ffffff;
+  background: #000050;
+  font-size: 28px;
+  margin: 0px;
+  padding: 0px 30px 0px 15px;
+  border-radius: 0px 0px 40px 0px;
+}
+
+#custom-hyprbindings, #network, #battery,
+#pulseaudio, #tray, #custom-exit {
+  font-weight: bold;
+  background:#000050;
+  color: #ffffff;
+  margin: 4px 0px;
+  margin-right: 7px;
+  border-radius: 10px 24px 10px 24px;
+  padding: 0px 18px;
+}
+
+#clock, #custom-notification {
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(90deg, #00001b, #000063);
+  margin: 4px 0px;
+  padding: 5px 30px;
+  border-radius: 30px 30px 30px 30px;
+}
+
+
         ''
       ];
     };
