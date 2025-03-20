@@ -66,9 +66,10 @@
     clipman # for clipboard
     wl-clipboard # for clipboard list
     # Custom Applications
-    # android-studio-full
-    firefox
     github-desktop
-    jetbrains-toolbox
+    floorp # browser
+    jetbrains-toolbox # intellijIDEA
+    dbgate # databse Viewer
+    mysql84 # MYSQL server
   ];
 }

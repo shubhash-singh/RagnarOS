@@ -2,7 +2,7 @@
   # Styling Options
   stylix = {
     enable = true;
-    image = ../../wallpapers/zaney-wallpaper.jpg;
+    image = ../../wallpapers/fighter_plane_generated.jpg;
     base16Scheme = {
       base00 = "282936";
       base01 = "3a3c4e";

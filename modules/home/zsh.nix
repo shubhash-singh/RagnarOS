@@ -5,17 +5,18 @@
     syntaxHighlighting.enable = true;
 
     initExtra = ''
-      bindkey "\eh" backward-word
-      bindkey "\ej" down-line-or-history
-      bindkey "\ek" up-line-or-history
-      bindkey "\el" forward-word
-       if [ -f $HOME/.zshrc-personal ]; then
-          source $HOME/.zshrc-personal
-        fi
-	EDITOR=nvim
+           bindkey "\eh" backward-word
+           bindkey "\ej" down-line-or-history
+           bindkey "\ek" up-line-or-history
+           bindkey "\el" forward-word
+            if [ -f $HOME/.zshrc-personal ]; then
+               source $HOME/.zshrc-personal
+             fi
+      EDITOR=nvim
     '';
 
     shellAliases = {
+      rebuild = "sudo nixos-rebuild switch --flake #nvidia-laptop";
       sv = "sudo nvim";
       v = "nvim";
       c = "clear";

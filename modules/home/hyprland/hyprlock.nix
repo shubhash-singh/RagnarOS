@@ -10,7 +10,7 @@
       };
       background = [
         {
-          path = "/home/${username}/Pictures/Wallpapers/mountainscapedark.jpg";
+          path = "/home/${username}/Pictures/Wallpapers/fighter_plane_generated.jpg";
           blur_passes = 3;
           blur_size = 8;
         }

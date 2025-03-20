@@ -21,7 +21,7 @@
         inherit (config.lib.formats.rasi) mkLiteral;
       in {
         "*" = {
-          bg = mkLiteral "#${config.stylix.base16Scheme.base00}";
+          bg = mkLiteral "#0000334D";
           bg-alt = mkLiteral "#${config.stylix.base16Scheme.base09}";
           foreground = mkLiteral "#${config.stylix.base16Scheme.base01}";
           selected = mkLiteral "#${config.stylix.base16Scheme.base08}";
@@ -57,7 +57,7 @@
         "imagebox" = {
           padding = mkLiteral "20px";
           background-color = mkLiteral "transparent";
-          background-image = mkLiteral ''url("~/Pictures/Wallpapers/Rainnight.jpg", height)'';
+          background-image = mkLiteral ''url("~/Pictures/Wallpapers/ragnar_pic.jpg", width)'';
           orientation = mkLiteral "vertical";
           children = map mkLiteral [
             "inputbar"
