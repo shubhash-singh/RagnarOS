@@ -60,7 +60,6 @@
     unzip # Tool For Handling .zip Files
     usbutils # Good Tools For USB Devices
     virt-viewer # View Virtual Machines
-    vscode-fhs
     wget # Tool For Fetching Files With Links
     yazi
     clipman # for clipboard
@@ -71,5 +70,7 @@
     jetbrains-toolbox # intellijIDEA
     dbgate # databse Viewer
     mysql84 # MYSQL server
+    prismlauncher # minecraft
+    vlc
   ];
 }

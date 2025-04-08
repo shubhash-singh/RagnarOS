@@ -20,13 +20,12 @@ in {
       "$modifier,C,exec,code"
       #"$modifier,G,exec,gimp"
       "$modifier,T,exec,pypr toggle term"
-      "$modifier SHIFT,T,exec,pypr toggle thunar"
+      "$modifier ,F,exec,pypr toggle thunar"
       "$modifier,M,exec,pavucontrol"
       "$modifier,Q,killactive,"
-      #"$modifier,P,exec,pypr toggle volume"
+      "$modifier,F,exec, thunar"
       #"$modifier SHIFT,P,pseudo,"
       "$modifier SHIFT,I,togglesplit,"
-      "$modifier,F,exec,thunar,"
       "bind = SUPER, V, exec, wl-paste | wl-copy," # Simple paste
       "bind = SUPER SHIFT, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy,"
 

@@ -23,6 +23,7 @@
     ./virtmanager.nix
     ./waybar.nix
     ./wlogout
+    ./vscode.nix
     ./xdg.nix
     ./zsh.nix
   ];
