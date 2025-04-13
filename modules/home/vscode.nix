@@ -18,27 +18,10 @@
       "terminal.integrated.fontSize" = 19.0;
       "workbench.colorTheme" = "Houston";
       "files.autoSave" = "onFocusChange";
-      "java.configuration.runtimes" = [
-        {
-          name = "JavaSE-1.8";
-          path = "/home/ragnar/.config/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/8";
-        }
-        {
-          name = "JavaSE-11";
-          path = "/home/ragnar/.config/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/11";
-        }
-        {
-          name = "JavaSE-17";
-          path = "/home/ragnar/.config/Code/User/globalStorage/pleiades.java-extension-pack-jdk/java/17";
-        }
-        {
-          name = "JavaSE-21";
-          path = "/nix/store/kkpj4pzzqaq0hxpqn25dbafjws9rl422-openjdk-21.0.5+11/lib/openjdk";
-        }
-      ];
+      "git.autofetch" = true;
     };
 
-    enable = true;
+    enable = false;
     package = pkgs.vscode-fhs;
     # extensions = with pkgs.vscode-extensions; [
     # ];

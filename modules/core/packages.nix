@@ -72,5 +72,6 @@
     mysql84 # MYSQL server
     prismlauncher # minecraft
     vlc
+    code-cursor # ai powered IDE
   ];
 }
