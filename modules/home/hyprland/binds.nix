@@ -1,7 +1,6 @@
 {host, ...}: let
   inherit
     (import ../../../hosts/${host}/variables.nix)
-    browser
     terminal
     ;
 in {
@@ -12,7 +11,7 @@ in {
       "$modifier SHIFT,W,exec,web-search"
       "$modifier ALT,W,exec,wallsetter"
       #"$modifier SHIFT,N,exec,swaync-client -rs"
-      "$modifier,W,exec,${browser}"
+      "$modifier,W,exec,firefox"
       "$modifier,E,exec,emopicker9000"
       "$modifier,S,exec,screenshootin"
       #"$modifier,D,exec,discord"
@@ -26,8 +25,8 @@ in {
       "$modifier,F,exec, thunar"
       #"$modifier SHIFT,P,pseudo,"
       "$modifier SHIFT,I,togglesplit,"
-      "bind = SUPER, V, exec, wl-paste | wl-copy," # Simple paste
-      "bind = SUPER SHIFT, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy,"
+      "$modifier SUPER, V, exec, wl-paste | wl-copy," # Simple paste
+      "$modifier SUPER SHIFT, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy,"
 
       "$modifier SHIFT,F,togglefloating,"
       "$modifier SHIFT,L,exit,"

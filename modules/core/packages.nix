@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   programs = {
-    firefox.enable = false; # Firefox is not installed by defualt
+    firefox.enable = true;
     dconf.enable = true;
     seahorse.enable = true;
     fuse.userAllowOther = true;
@@ -66,12 +66,14 @@
     wl-clipboard # for clipboard list
     # Custom Applications
     github-desktop
-    floorp # browser
+    firefox # browser
     jetbrains-toolbox # intellijIDEA
     dbgate # databse Viewer
     mysql84 # MYSQL server
     prismlauncher # minecraft
     vlc
     code-cursor # ai powered IDE
+    wpsoffice # WPS for office tools
+    chromium #chromium as browser
   ];
 }

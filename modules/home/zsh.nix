@@ -29,6 +29,7 @@
       ls = "eza --icons --group-directories-first -1";
       ll = "eza --icons -a --group-directories-first -1 --no-user --long";
       tree = "eza --icons --tree --group-directories-first";
+      pyinit = "cp ~/Templates/flake.nix .";
     };
   };
 }

@@ -182,109 +182,108 @@ in
       ];
       style = concatStrings [
         ''
-                    * {
-            font-family: JetBrainsMono Nerd Font Mono;
-            font-size: 16px;
-            border-radius: 0px;
-            border: none;
-            min-height: 0px;
-            color: #ffffff;
-          }
+          * {
+              font-family: JetBrainsMono Nerd Font Mono;
+              font-size: 12px;
+              border-radius: 0px;
+              border: none;
+              min-height: 0px;
+              color: #ffffff;
+            }
 
-          window#waybar {
-            background:rgba(0, 0, 0, 0);
-          }
+            window#waybar {
+              background:rgba(0, 0, 0, 0);
+            }
 
-          #workspaces {
-            color: #ffffff;
-            background: #0a0a40;
-            margin: 4px 4px;
-            padding: 5px 5px;
-            border-radius: 16px;
-          }
+            #workspaces {
+              color: #ffffff;
+              background: #0a0a40;
+              margin: 4px 4px;
+              padding: 5px 5px;
+              border-radius: 16px;
+            }
 
-          #workspaces button {
-            font-weight: bold;
-            padding: 0px 5px;
-            margin: 0px 3px;
-            border-radius: 16px;
-            color: #ffffff;
-            background: linear-gradient(45deg, #001e44, #0b003b);
-            opacity: 0.5;
-            transition: ${betterTransition};
-          }
+            #workspaces button {
+              font-weight: bold;
+              padding: 0px 5px;
+              margin: 0px 3px;
+              border-radius: 16px;
+              color: #ffffff;
+              background: linear-gradient(45deg, #001e44, #0b003b);
+              opacity: 0.5;
+              transition: ${betterTransition};
+            }
 
-          #workspaces button.active {
-            font-weight: bold;
-            padding: 0px 5px;
-            margin: 0px 3px;
-            border-radius: 16px;
-            color: #ffffff;
-            background: linear-gradient(45deg, #001a66, #002080);
-            transition: ${betterTransition};
-            opacity: 1.0;
-            min-width: 40px;
-          }
+            #workspaces button.active {
+              font-weight: bold;
+              padding: 0px 5px;
+              margin: 0px 3px;
+              border-radius: 16px;
+              color: #ffffff;
+              background: linear-gradient(45deg, #001a66, #002080);
+              transition: ${betterTransition};
+              opacity: 1.0;
+              min-width: 40px;
+            }
 
-          #workspaces button:hover {
-            font-weight: bold;
-            border-radius: 16px;
-            color: #ffffff;
-            background: linear-gradient(45deg, #001a66, #002080);
-            opacity: 0.8;
-            transition: ${betterTransition};
-          }
+            #workspaces button:hover {
+              font-weight: bold;
+              border-radius: 16px;
+              color: #ffffff;
+              background: linear-gradient(45deg, #001a66, #002080);
+              opacity: 0.8;
+              transition: ${betterTransition};
+            }
 
-          tooltip {
-            background: #0a0a40;
-            border: 1px solid #001a66;
-            border-radius: 12px;
-          }
+            tooltip {
+              background: #0a0a40;
+              border: 1px solid #001a66;
+              border-radius: 12px;
+            }
 
-          tooltip label {
-            color: #ffffff;
-          }
+            tooltip label {
+              color: #ffffff;
+            }
 
-          #window, #cpu, #memory, #idle_inhibitor, #custom-name {
-            font-weight: bold;
-            margin: 4px 0px;
-            margin-left: 7px;
-            padding: 0px 18px;
-            background: #0b003b;
-            color: #ffffff;
-            border-radius: 24px 10px 24px 10px;
-          }
+            #window, #cpu, #memory, #idle_inhibitor, #custom-name {
+              font-weight: bold;
+              margin: 4px 0px;
+              margin-left: 7px;
+              padding: 0px 18px;
+              background: #0b003b;
+              color: #ffffff;
+              border-radius: 24px 10px 24px 10px;
+            }
 
-          #custom-startmenu {
-            color: #ffffff;
-            background: #000050;
-            font-size: 28px;
-            margin: 0px;
-            padding: 0px 30px 0px 15px;
-            border-radius: 0px 0px 40px 0px;
-          }
+            #custom-startmenu {
+              color: #ffffff;
+              background: #000050;
+              font-size: 28px;
+              margin: 0px;
+              padding: 0px 30px 0px 15px;
+              border-radius: 0px 0px 40px 0px;
+            }
 
-          #custom-hyprbindings, #network, #battery,
-          #pulseaudio, #tray, #custom-exit {
-            font-weight: bold;
-            background:#000050;
-            color: #ffffff;
-            margin: 4px 0px;
-            margin-right: 7px;
-            border-radius: 10px 24px 10px 24px;
-            padding: 0px 18px;
-          }
+            #custom-hyprbindings, #network, #battery,
+            #pulseaudio, #tray, #custom-exit {
+              font-weight: bold;
+              background:#000050;
+              color: #ffffff;
+              margin: 4px 0px;
+              margin-right: 7px;
+              border-radius: 10px 24px 10px 24px;
+              padding: 0px 18px;
+            }
 
-          #clock, #custom-notification {
-            font-weight: bold;
-            color: #ffffff;
-            background: linear-gradient(90deg, #00001b, #000063);
-            margin: 4px 0px;
-            padding: 5px 30px;
-            border-radius: 30px 30px 30px 30px;
-          }
+            #clock, #custom-notification {
+              font-weight: bold;
+              color: #ffffff;
+              background: linear-gradient(90deg, #00001b, #000063);
+              margin: 4px 3px;
 
-
+              padding: 5px 30px;
+              border-radius: 30px 30px 30px 30px;
+            }
         ''
       ];
     };
