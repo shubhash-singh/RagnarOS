@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs = {
     firefox.enable = true;
     dconf.enable = true;
@@ -68,12 +69,9 @@
     github-desktop
     firefox # browser
     jetbrains-toolbox # intellijIDEA
-    dbgate # databse Viewer
-    mysql84 # MYSQL server
     prismlauncher # minecraft
     vlc
-    code-cursor # ai powered IDE
     wpsoffice # WPS for office tools
-    chromium #chromium as browser
+    chromium # chromium as browser
   ];
 }
