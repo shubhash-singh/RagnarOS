@@ -65,6 +65,11 @@
     yazi
     clipman # for clipboard
     wl-clipboard # for clipboard list
+
+    # System apps
+    btop
+    neofetch
+
     # Custom Applications
     github-desktop
     firefox # browser
