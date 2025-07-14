@@ -78,5 +78,7 @@
     vlc
     wpsoffice # WPS for office tools
     chromium # chromium as browser
+    code-cursor
+    obsidian
   ];
 }

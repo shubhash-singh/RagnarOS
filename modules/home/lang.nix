@@ -15,8 +15,8 @@
 
     jdk #java
     flutter #platform independent android IDE
-    #    clang #c and c++
-    #    mongodb
+    mysql84 # MySQL
+    mongodb-ce # MongoDB 
     cmake
     jdt-language-server # for auto complete in java
   ];

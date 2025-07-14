@@ -1,6 +1,7 @@
 {
   inputs,
   config,
+  lib,
   ...
 }:
 {
@@ -79,9 +80,9 @@
 
       theme = {
         enable = true;
-        name = "dracula";
+        name = lib.mkForce "dracula";
         style = "dark";
-        transparent = true;
+        transparent = false;
       };
 
       telescope.enable = true;
@@ -132,7 +133,7 @@
       statusline = {
         lualine = {
           enable = true;
-          theme = "dracula";
+          theme = lib.mkForce "dracula";
         };
       };
 
