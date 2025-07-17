@@ -23,7 +23,7 @@ in {
       "$modifier,M,exec,pavucontrol"
       "$modifier,Q,killactive,"
       "$modifier,F,exec, thunar"
-      #"$modifier SHIFT,P,pseudo,"
+      "$modifier SHIFT, A, exec, android-studio"
       "$modifier SHIFT,I,togglesplit,"
       "$modifier SUPER, V, exec, wl-paste | wl-copy," # Simple paste
       "$modifier SUPER SHIFT, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy,"

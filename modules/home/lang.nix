@@ -9,6 +9,7 @@
         pandas
         django
         matplotlib
+        openpyxl
 
         # Add more pip packages here
       ]))

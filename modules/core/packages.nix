@@ -80,5 +80,6 @@
     chromium # chromium as browser
     code-cursor
     obsidian
+    android-studio
   ];
 }
