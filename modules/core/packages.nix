@@ -65,7 +65,9 @@
     yazi
     clipman # for clipboard
     wl-clipboard # for clipboard list
-
+    
+    #manage widget
+    eww
     # System apps
     btop
     neofetch
@@ -81,5 +83,7 @@
     code-cursor
     obsidian
     android-studio
+    postman # used to test and debug API
+    dbgate # for MySQL connectivity
   ];
 }
