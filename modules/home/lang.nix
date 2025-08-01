@@ -21,5 +21,6 @@
     cmake
     nodejs_24
     jdt-language-server # for auto complete in java
+    maven # maven to build java project
   ];
 }
