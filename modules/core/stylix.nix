@@ -3,7 +3,7 @@
   # Styling Options
   stylix = {
     enable = true;
-    image = ../../wallpapers/jungle_mahadev.jpg;
+    image = ../../wallpapers/colorful.jpg;
     base16Scheme = {
       base00 = "282936";
       base01 = "3a3c4e";

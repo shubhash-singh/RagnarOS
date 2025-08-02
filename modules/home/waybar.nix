@@ -192,12 +192,13 @@ in
             }
 
             window#waybar {
-              background:rgba(0, 0, 0, 0);
+              background: rgba(0,0,0,0);
             }
 
             #workspaces {
               color: #ffffff;
-              background: #0a0a40;
+              background: rgba(255, 255, 255, 0.15);
+              border: 1px solid rgba(255, 255, 255, 0.3);
               margin: 4px 4px;
               padding: 5px 5px;
               border-radius: 16px;
@@ -209,8 +210,9 @@ in
               margin: 0px 3px;
               border-radius: 16px;
               color: #ffffff;
-              background: linear-gradient(45deg, #001e44, #0b003b);
-              opacity: 0.5;
+              background: rgba(255, 255, 255, 0.1);
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              opacity: 0.7;
               transition: ${betterTransition};
             }
 
@@ -220,7 +222,8 @@ in
               margin: 0px 3px;
               border-radius: 16px;
               color: #ffffff;
-              background: linear-gradient(45deg, #001a66, #002080);
+              background: rgba(255, 255, 255, 0.25);
+              border: 1px solid rgba(255, 255, 255, 0.4);
               transition: ${betterTransition};
               opacity: 1.0;
               min-width: 40px;
@@ -230,14 +233,15 @@ in
               font-weight: bold;
               border-radius: 16px;
               color: #ffffff;
-              background: linear-gradient(45deg, #001a66, #002080);
-              opacity: 0.8;
+              background: rgba(255, 255, 255, 0.2);
+              border: 1px solid rgba(255, 255, 255, 0.35);
+              opacity: 0.9;
               transition: ${betterTransition};
             }
 
             tooltip {
-              background: #0a0a40;
-              border: 1px solid #001a66;
+              background: rgba(255, 255, 255, 0.2);
+              border: 1px solid rgba(255, 255, 255, 0.3);
               border-radius: 12px;
             }
 
@@ -250,14 +254,16 @@ in
               margin: 4px 0px;
               margin-left: 7px;
               padding: 0px 18px;
-              background: #0b003b;
+              background: rgba(255, 255, 255, 0.15);
+              border: 1px solid rgba(255, 255, 255, 0.25);
               color: #ffffff;
               border-radius: 24px 10px 24px 10px;
             }
 
             #custom-startmenu {
               color: #ffffff;
-              background: #000050;
+              background: rgba(255, 255, 255, 0.15);
+              border: 1px solid rgba(255, 255, 255, 0.25);
               font-size: 28px;
               margin: 0px;
               padding: 0px 30px 0px 15px;
@@ -267,7 +273,8 @@ in
             #custom-hyprbindings, #network, #battery,
             #pulseaudio, #tray, #custom-exit {
               font-weight: bold;
-              background:#000050;
+              background: rgba(255, 255, 255, 0.15);
+              border: 1px solid rgba(255, 255, 255, 0.25);
               color: #ffffff;
               margin: 4px 0px;
               margin-right: 7px;
@@ -278,9 +285,9 @@ in
             #clock, #custom-notification {
               font-weight: bold;
               color: #ffffff;
-              background: linear-gradient(90deg, #00001b, #000063);
+              background: rgba(255, 255, 255, 0.15);
+              border: 1px solid rgba(255, 255, 255, 0.25);
               margin: 4px 3px;
-
               padding: 5px 30px;
               border-radius: 30px 30px 30px 30px;
             }

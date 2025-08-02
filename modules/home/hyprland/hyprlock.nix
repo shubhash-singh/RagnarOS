@@ -10,7 +10,7 @@
       };
       background = [
         {
-          path = "/home/${username}/Pictures/Wallpapers/jungle_mahadev.jpg";
+          path = "/home/${username}/Pictures/Wallpapers/light_sphere.jpg";
           blur_passes = 3;
           blur_size = 8;
         }

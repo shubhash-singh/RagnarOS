@@ -12,7 +12,7 @@
     inputbar {
       padding: 75px 40px;
       background-color: transparent;
-      background-image: url("~/Pictures/Wallpapers/jungle_mahadev.jpg", width);
+      background-image: url("~/Pictures/Wallpapers/colorful.jpg", width);
       text-color: @foreground;
       children: [ "textbox-prompt-colon", "entry" ];
     }
