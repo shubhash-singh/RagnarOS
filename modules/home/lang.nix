@@ -10,7 +10,9 @@
         django
         matplotlib
         openpyxl
-
+        sympy
+        seaborn
+        psutil
         # Add more pip packages here
       ]))
 

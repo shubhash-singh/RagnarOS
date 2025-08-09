@@ -86,7 +86,7 @@
     postman # used to test and debug API
     dbgate # for MySQL connectivity
     vscode-fhs # Visual Studio Code
-    claude-code
     droidcam # to connect phone camera with system
+    jupyter # Jupyter Notebook
   ];
 }
