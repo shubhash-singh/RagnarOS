@@ -16,7 +16,7 @@ in {
       "$modifier,S,exec,screenshootin"
       #"$modifier,D,exec,discord"
       #"$modifier,O,exec,obs"
-      "$modifier,C,exec,cursor"
+      "$modifier,C,exec,code"
       #"$modifier,G,exec,gimp"
       "$modifier,T,exec,pypr toggle term"
       #"$modifier ,F,exec,pypr toggle thunar"

@@ -12,8 +12,7 @@
         openpyxl
         sympy
         seaborn
-        psutil
-        # Add more pip packages here
+        virtualenv
       ]))
 
     jdk #java
@@ -24,5 +23,7 @@
     nodejs_24
     jdt-language-server # for auto complete in java
     maven # maven to build java project
+    apktool # apk reverse engineering
+    jadx # apk reverse engineering
   ];
 }

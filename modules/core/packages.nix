@@ -65,7 +65,8 @@
     yazi
     clipman # for clipboard
     wl-clipboard # for clipboard list
-    
+    zstd # used by python PyQt6 for GUI interface
+
     #manage widget
     eww
     # System apps
