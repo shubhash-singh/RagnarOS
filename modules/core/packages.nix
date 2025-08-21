@@ -89,5 +89,7 @@
     vscode-fhs # Visual Studio Code
     droidcam # to connect phone camera with system
     jupyter # Jupyter Notebook
+
+    docker
   ];
 }
