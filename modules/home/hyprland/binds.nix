@@ -27,7 +27,7 @@ in {
       "$modifier SHIFT,I,togglesplit,"
       "$modifier SUPER, V, exec, wl-paste | wl-copy," # Simple paste
       "$modifier SUPER SHIFT, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy,"
-
+      "$modifier SUPER SHIFT, P, exec, systemctl suspend"
       "$modifier SHIFT,F,togglefloating,"
       "$modifier SHIFT,L,exit,"
       "$modifier SHIFT,left,movewindow,l"

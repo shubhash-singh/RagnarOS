@@ -5,7 +5,8 @@
   config,
   ...
 }: let
-  betterTransition = "all 0.3s cubic-bezier(.55,-0.68,.48,1.682)";
+  # A smoother, more standard transition for animations
+  betterTransition = "all 0.3s ease-in-out";
   inherit (import ../../hosts/${host}/variables.nix) clock24h;
 in
   with lib; {
@@ -26,9 +27,11 @@ in
             "custom/startmenu"
             "cpu"
             "memory"
+            # Add "network" here if you want it on the left
           ];
           modules-right = [
             "custom/hyprbindings"
+            "network" # <-- Moved network module here for better visibility
             "pulseaudio"
             "tray"
             "battery"
@@ -74,7 +77,9 @@ in
             format = " {free}";
             tooltip = true;
           };
+          # --- UPDATED NETWORK MODULE ---
           "network" = {
+            interval = 1; # Update every second for real-time speed
             format-icons = [
               "󰤯"
               "󰤟"
@@ -82,11 +87,12 @@ in
               "󰤥"
               "󰤨"
             ];
-            format-ethernet = " {bandwidthDownOctets}";
-            format-wifi = "{icon} {signalStrength}%";
-            format-disconnected = "󰤮";
+            format-wifi = "{icon}  {bandwidthUpBytes}  {bandwidthDownBytes}";
+            format-ethernet = "󰈀  {bandwidthUpBytes}  {bandwidthDownBytes}";
+            format-disconnected = "󰤮 Disconnected";
             tooltip = false;
           };
+          # ------------------------------
           "tray" = {
             spacing = 12;
           };
@@ -99,7 +105,7 @@ in
             format-source-muted = "";
             format-icons = {
               headphone = "";
-              hands-free = "";
+              "hands-free" = "";
               headset = "";
               phone = "";
               portable = "";
@@ -119,7 +125,7 @@ in
           };
           "custom/startmenu" = {
             tooltip = false;
-            format = "ॐ";
+            format = "Shubhash";
             # exec = "rofi -show drun";
             on-click = "sleep 0.1 && rofi-launcher";
           };
@@ -142,12 +148,12 @@ in
             format-icons = {
               notification = "<span foreground='red'><sup></sup></span>";
               none = "";
-              dnd-notification = "<span foreground='red'><sup></sup></span>";
-              dnd-none = "";
-              inhibited-notification = "<span foreground='red'><sup></sup></span>";
-              inhibited-none = "";
-              dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>";
-              dnd-inhibited-none = "";
+              "dnd-notification" = "<span foreground='red'><sup></sup></span>";
+              "dnd-none" = "";
+              "inhibited-notification" = "<span foreground='red'><sup></sup></span>";
+              "inhibited-none" = "";
+              "dnd-inhibited-notification" = "<span foreground='red'><sup></sup></span>";
+              "dnd-inhibited-none" = "";
             };
             return-type = "json";
             exec-if = "which swaync-client";
@@ -182,115 +188,108 @@ in
       ];
       style = concatStrings [
         ''
+          /* --- Global Styles --- */
           * {
-              font-family: JetBrainsMono Nerd Font Mono;
-              font-size: 12px;
-              border-radius: 0px;
-              border: none;
-              min-height: 0px;
-              color: #ffffff;
-            }
+            font-family: JetBrainsMono Nerd Font Mono;
+            font-size: 13px;
+            border: none;
+            border-radius: 0;
+            min-height: 0;
+          }
 
-            window#waybar {
-              background: rgba(0,0,0,0);
-            }
+          /* --- Main Bar --- */
+          window#waybar {
+            background: #1E1E2E; /* Dark Blue Background */
+            color: #CAD3F5;      /* Light Text */
+          }
 
-            #workspaces {
-              color: #ffffff;
-              background: rgba(255, 255, 255, 0.15);
-              border: 1px solid rgba(255, 255, 255, 0.3);
-              margin: 4px 4px;
-              padding: 5px 5px;
-              border-radius: 16px;
-            }
+          /* --- Tooltips --- */
+          tooltip {
+            background: #181825;
+            border: 1px solid #ED8796; /* Red Border */
+            border-radius: 12px;
+          }
+          tooltip label {
+            color: #CAD3F5;
+          }
 
-            #workspaces button {
-              font-weight: bold;
-              padding: 0px 5px;
-              margin: 0px 3px;
-              border-radius: 16px;
-              color: #ffffff;
-              background: rgba(255, 255, 255, 0.1);
-              border: 1px solid rgba(255, 255, 255, 0.2);
-              opacity: 0.7;
-              transition: ${betterTransition};
-            }
+          /* --- Workspaces --- */
+          #workspaces {
+            background: #313244;
+            border-radius: 16px;
+            margin: 5px;
+            padding: 2px 5px;
+          }
+          #workspaces button {
+            color: #CAD3F5;
+            background: transparent;
+            font-weight: bold;
+            padding: 0px 8px;
+            margin: 3px 3px;
+            border-radius: 12px;
+            transition: ${betterTransition};
+          }
+          #workspaces button:hover {
+            background: #8AADF4; /* Blue Hover */
+            color: #1E1E2E;
+          }
+          #workspaces button.active {
+            background: #ED8796; /* Red Active */
+            color: #1E1E2E;
+            min-width: 40px;
+          }
+          
+          /* --- General Module Styles --- */
+          #window, #cpu, #memory, #idle_inhibitor, #custom-name,
+          #custom-hyprbindings, #network, #battery,
+          #pulseaudio, #tray, #custom-exit, #clock, #custom-notification {
+            font-weight: bold;
+            background: #313244; /* Darker Module BG */
+            color: #CAD3F5;
+            margin: 5px 0px;
+            padding: 0px 18px;
+          }
 
-            #workspaces button.active {
-              font-weight: bold;
-              padding: 0px 5px;
-              margin: 0px 3px;
-              border-radius: 16px;
-              color: #ffffff;
-              background: rgba(255, 255, 255, 0.25);
-              border: 1px solid rgba(255, 255, 255, 0.4);
-              transition: ${betterTransition};
-              opacity: 1.0;
-              min-width: 40px;
-            }
+          /* --- Left Modules --- */
+          #custom-startmenu {
+            color: #1E1E2E;
+            background: #8AADF4; /* Blue BG */
+            font-size: 18px;
+            margin-down: 5px;
+            margin-right: 8px;
+            padding: 0px 30px 0px 15px;
+            border-radius: 0px 0px 40px 0px;
+          }
+          #cpu, #memory {
+            margin-left: 8px;
+            border-radius: 24px 10px 24px 10px;
+          }
 
-            #workspaces button:hover {
-              font-weight: bold;
-              border-radius: 16px;
-              color: #ffffff;
-              background: rgba(255, 255, 255, 0.2);
-              border: 1px solid rgba(255, 255, 255, 0.35);
-              opacity: 0.9;
-              transition: ${betterTransition};
-            }
+          /* --- Center Modules --- */
+          #clock, #custom-notification {
+            padding: 5px 25px;
+            margin: 5px 4px;
+            border-radius: 16px;
+          }
 
-            tooltip {
-              background: rgba(255, 255, 255, 0.2);
-              border: 1px solid rgba(255, 255, 255, 0.3);
-              border-radius: 12px;
-            }
+          /* --- Right Modules --- */
+          #custom-hyprbindings, #network, #battery,
+          #pulseaudio, #tray, #custom-exit {
+            margin-right: 8px;
+            border-radius: 10px 24px 10px 24px;
+          }
+          #custom-exit {
+            color: #1E1E2E;
+            background: #ED8796; /* Red BG */
+          }
 
-            tooltip label {
-              color: #ffffff;
-            }
-
-            #window, #cpu, #memory, #idle_inhibitor, #custom-name {
-              font-weight: bold;
-              margin: 4px 0px;
-              margin-left: 7px;
-              padding: 0px 18px;
-              background: rgba(255, 255, 255, 0.15);
-              border: 1px solid rgba(255, 255, 255, 0.25);
-              color: #ffffff;
-              border-radius: 24px 10px 24px 10px;
-            }
-
-            #custom-startmenu {
-              color: #ffffff;
-              background: rgba(255, 255, 255, 0.15);
-              border: 1px solid rgba(255, 255, 255, 0.25);
-              font-size: 28px;
-              margin: 0px;
-              padding: 0px 30px 0px 15px;
-              border-radius: 0px 0px 40px 0px;
-            }
-
-            #custom-hyprbindings, #network, #battery,
-            #pulseaudio, #tray, #custom-exit {
-              font-weight: bold;
-              background: rgba(255, 255, 255, 0.15);
-              border: 1px solid rgba(255, 255, 255, 0.25);
-              color: #ffffff;
-              margin: 4px 0px;
-              margin-right: 7px;
-              border-radius: 10px 24px 10px 24px;
-              padding: 0px 18px;
-            }
-
-            #clock, #custom-notification {
-              font-weight: bold;
-              color: #ffffff;
-              background: rgba(255, 255, 255, 0.15);
-              border: 1px solid rgba(255, 255, 255, 0.25);
-              margin: 4px 3px;
-              padding: 5px 30px;
-              border-radius: 30px 30px 30px 30px;
-            }
+          /* --- Module-specific Colors & States --- */
+          #clock { color: #8AADF4; }      /* Blue Clock */
+          #cpu { color: #8AADF4; }        /* Blue CPU */
+          #memory { color: #ED8796; }    /* Red Memory */
+          #network { color: #A6DA95; }    /* Green Network */
+          #battery.charging, #battery.plugged { color: #A6DA95; } /* Green Charging */
+          #battery.critical:not(.charging) { color: #ED8796; }   /* Red Critical Battery */
         ''
       ];
     };
