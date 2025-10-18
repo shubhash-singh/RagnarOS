@@ -255,8 +255,7 @@ in
             color: #1E1E2E;
             background: #8AADF4; /* Blue BG */
             font-size: 18px;
-            margin-down: 5px;
-            margin-right: 8px;
+            margin: 0px 5px 4px 0px; /* margin: top right bottom left */
             padding: 0px 30px 0px 15px;
             border-radius: 0px 0px 40px 0px;
           }

@@ -82,7 +82,7 @@
     wpsoffice # WPS for office tools
     chromium # chromium as browser
     code-cursor
-    obsidian
+#   obsidian
     android-studio
     postman # used to test and debug API
     dbgate # for MySQL connectivity
