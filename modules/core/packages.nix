@@ -38,7 +38,7 @@
     file-roller # Archive Manager
 
     gedit # Simple Graphical Text Editor
-    greetd.tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
+    tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
     hyprpicker # Color Picker
     eog # For Image Viewing
     inxi # CLI System Information Tool
@@ -91,5 +91,8 @@
     jupyter # Jupyter Notebook
 
     docker
+
+# live wallpaper
+swww
   ];
 }

@@ -147,13 +147,13 @@ in
             format = "{icon} {}";
             format-icons = {
               notification = "<span foreground='red'><sup></sup></span>";
-              none = "";
+              none = "🔔";
               "dnd-notification" = "<span foreground='red'><sup></sup></span>";
-              "dnd-none" = "";
+              "dnd-none" = "🔔";
               "inhibited-notification" = "<span foreground='red'><sup></sup></span>";
-              "inhibited-none" = "";
+              "inhibited-none" = "🔔";
               "dnd-inhibited-notification" = "<span foreground='red'><sup></sup></span>";
-              "dnd-inhibited-none" = "";
+              "dnd-inhibited-none" = "🔔";
             };
             return-type = "json";
             exec-if = "which swaync-client";
@@ -199,7 +199,7 @@ in
 
           /* --- Main Bar --- */
           window#waybar {
-            background: #1E1E2E; /* Dark Blue Background */
+            background: transparent; /* Transparent Background */
             color: #CAD3F5;      /* Light Text */
           }
 

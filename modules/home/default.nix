@@ -14,7 +14,8 @@
     ./hyprland
     ./kitty.nix
     ./lang.nix
-    ./nvf.nix
+    # ./nvf.nix
+    ./nvim
     ./rofi
     ./qt.nix
     ./scripts
@@ -23,6 +24,7 @@
     ./swaync.nix
     ./virtmanager.nix
     ./waybar.nix
+    ./wallpaper.nix
     ./wlogout
     ./xdg.nix
     ./zsh.nix

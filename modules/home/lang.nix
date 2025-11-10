@@ -20,7 +20,7 @@
     mysql84 # MySQL
     mongodb-ce # MongoDB 
     cmake
-    nodejs_24
+    # nodejs_24
     jdt-language-server # for auto complete in java
     maven # maven to build java project
     apktool # apk reverse engineering

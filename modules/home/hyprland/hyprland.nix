@@ -5,6 +5,7 @@
 }: {
   home.packages = with pkgs; [
     swww
+    swaybg
     grim
     slurp
     wl-clipboard
