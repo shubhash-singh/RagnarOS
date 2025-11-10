@@ -146,13 +146,13 @@ in
             tooltip = false;
             format = "{icon} {}";
             format-icons = {
-              notification = "<span foreground='red'><sup></sup></span>";
-              none = "🔔";
-              "dnd-notification" = "<span foreground='red'><sup></sup></span>";
-              "dnd-none" = "🔔";
-              "inhibited-notification" = "<span foreground='red'><sup></sup></span>";
-              "inhibited-none" = "🔔";
-              "dnd-inhibited-notification" = "<span foreground='red'><sup></sup></span>";
+              notification = "<span foreground='#B22222'><sup></sup></span>";
+              none = "Bell";
+              "dnd-notification" = "<span foreground='#B22222'><sup></sup></span>";
+              "dnd-none" = "Bell";
+              "inhibited-notification" = "<span foreground='#B22222'><sup></sup></span>";
+              "inhibited-none" = "";
+              "dnd-inhibited-notification" = "<span foreground='#B22222'><sup></sup></span>";
               "dnd-inhibited-none" = "🔔";
             };
             return-type = "json";
@@ -205,23 +205,23 @@ in
 
           /* --- Tooltips --- */
           tooltip {
-            background: #181825;
-            border: 1px solid #ED8796; /* Red Border */
+            background: #0A0A0A;
+            border: 1px solid #B22222; /* Distressed red border */
             border-radius: 12px;
           }
           tooltip label {
-            color: #CAD3F5;
+            color: #E0E0E0;
           }
 
           /* --- Workspaces --- */
           #workspaces {
-            background: #313244;
+            background: rgba(20, 20, 20, 0.8); /* Dark gray background */
             border-radius: 16px;
             margin: 5px;
             padding: 2px 5px;
           }
           #workspaces button {
-            color: #CAD3F5;
+            color: #B0B0B0; /* Light gray inactive */
             background: transparent;
             font-weight: bold;
             padding: 0px 8px;
@@ -230,12 +230,12 @@ in
             transition: ${betterTransition};
           }
           #workspaces button:hover {
-            background: #8AADF4; /* Blue Hover */
-            color: #1E1E2E;
+            background: rgba(178, 34, 34, 0.4); /* Dark red hover */
+            color: #E0E0E0;
           }
           #workspaces button.active {
-            background: #ED8796; /* Red Active */
-            color: #1E1E2E;
+            background: #B22222; /* Distressed red active */
+            color: #FFFFFF;
             min-width: 40px;
           }
           
@@ -244,16 +244,16 @@ in
           #custom-hyprbindings, #network, #battery,
           #pulseaudio, #tray, #custom-exit, #clock, #custom-notification {
             font-weight: bold;
-            background: #313244; /* Darker Module BG */
-            color: #CAD3F5;
+            background: rgba(20, 20, 20, 0.8); /* Dark module background */
+            color: #E0E0E0; /* Light gray text */
             margin: 5px 0px;
             padding: 0px 18px;
           }
 
           /* --- Left Modules --- */
           #custom-startmenu {
-            color: #1E1E2E;
-            background: #8AADF4; /* Blue BG */
+            color: #FFFFFF;
+            background: #B22222; /* Distressed red BG */
             font-size: 18px;
             margin: 0px 5px 4px 0px; /* margin: top right bottom left */
             padding: 0px 30px 0px 15px;
@@ -278,17 +278,18 @@ in
             border-radius: 10px 24px 10px 24px;
           }
           #custom-exit {
-            color: #1E1E2E;
-            background: #ED8796; /* Red BG */
+            color: #FFFFFF;
+            background: #B22222; /* Distressed red BG */
           }
 
           /* --- Module-specific Colors & States --- */
-          #clock { color: #8AADF4; }      /* Blue Clock */
-          #cpu { color: #8AADF4; }        /* Blue CPU */
-          #memory { color: #ED8796; }    /* Red Memory */
-          #network { color: #A6DA95; }    /* Green Network */
-          #battery.charging, #battery.plugged { color: #A6DA95; } /* Green Charging */
-          #battery.critical:not(.charging) { color: #ED8796; }   /* Red Critical Battery */
+          #clock { color: #E0E0E0; }      /* Light gray clock */
+          #cpu { color: #FF8C00; }        /* Orange CPU (embers) */
+          #memory { color: #B22222; }    /* Distressed red memory */
+          #network { color: #E0E0E0; }    /* Light gray network */
+          #battery.charging, #battery.plugged { color: #FFA500; } /* Orange charging (embers) */
+          #battery.critical:not(.charging) { color: #B22222; }   /* Distressed red critical battery */
+          #pulseaudio { color: #E0E0E0; } /* Light gray audio */
         ''
       ];
     };

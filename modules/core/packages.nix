@@ -92,7 +92,7 @@
 
     docker
 
-# live wallpaper
-swww
+    # live wallpaper
+    mpvpaper
   ];
 }
