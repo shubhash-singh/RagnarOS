@@ -91,6 +91,7 @@
     jupyter # Jupyter Notebook
 
     docker
+    isoimagewriter # to burn the drive
 
     # live wallpaper
     mpvpaper

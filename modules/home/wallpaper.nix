@@ -8,7 +8,7 @@
       #!/usr/bin/env bash
       pkill mpvpaper 2>/dev/null
       sleep 2
-      mpvpaper -o "loop mute" "*" "/home/ragnar/Pictures/Wallpapers/live_batman.webm"
+      mpvpaper -o "loop mute" "*" "/home/ragnar/Pictures/Live_Wallpaper/white_snow.webm"
     '';
     executable = true;
   };

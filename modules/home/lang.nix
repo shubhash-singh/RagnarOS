@@ -25,5 +25,6 @@
     maven # maven to build java project
     apktool # apk reverse engineering
     jadx # apk reverse engineering
+    xclicker # auto clicker
   ];
 }
