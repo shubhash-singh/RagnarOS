@@ -24,7 +24,6 @@
     ./swaync.nix
     ./virtmanager.nix
     ./waybar.nix
-    ./wallpaper.nix
     ./wlogout
     ./xdg.nix
     ./zsh.nix

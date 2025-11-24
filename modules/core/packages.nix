@@ -67,8 +67,6 @@
     wl-clipboard # for clipboard list
     zstd # used by python PyQt6 for GUI interface
 
-    #manage widget
-    eww
     # System apps
     btop
     neofetch
@@ -79,21 +77,14 @@
     jetbrains-toolbox # intellijIDEA
     prismlauncher # minecraft
     vlc
-    wpsoffice # WPS for office tools
+    libreoffice-qt6-fresh #for office tools
     chromium # chromium as browser
     code-cursor
-#   obsidian
     android-studio
     postman # used to test and debug API
     dbgate # for MySQL connectivity
     vscode-fhs # Visual Studio Code
     droidcam # to connect phone camera with system
-    jupyter # Jupyter Notebook
-
-    docker
-    isoimagewriter # to burn the drive
-
-    # live wallpaper
-    mpvpaper
+    qalculate-qt # Calculator
   ];
 }
