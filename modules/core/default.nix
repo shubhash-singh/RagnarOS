@@ -2,7 +2,7 @@
 {
   imports = [
     ./boot.nix
-    ./flatpak.nix
+    #./flatpak.nix
     ./fonts.nix
     ./greetd.nix
     ./hardware.nix

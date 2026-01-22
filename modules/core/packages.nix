@@ -7,7 +7,6 @@
     fuse.userAllowOther = true;
     virt-manager.enable = true;
     mtr.enable = true;
-    adb.enable = true;
 
     gnupg.agent = {
       enable = true;
@@ -29,6 +28,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    android-tools # Provides adb command (replaces deprecated programs.adb)
     appimage-run # Needed For AppImage Support
     brightnessctl # For Screen Brightness Control
     cmatrix # Matrix Movie Effect In Terminal
@@ -63,9 +63,8 @@
     virt-viewer # View Virtual Machines
     wget # Tool For Fetching Files With Links
     yazi
-    clipman # for clipboard
-    wl-clipboard # for clipboard list
     zstd # used by python PyQt6 for GUI interface
+
 
     # System apps
     btop
@@ -79,12 +78,14 @@
     vlc
     libreoffice-qt6-fresh #for office tools
     chromium # chromium as browser
-    code-cursor
     android-studio
     postman # used to test and debug API
     dbgate # for MySQL connectivity
     vscode-fhs # Visual Studio Code
     droidcam # to connect phone camera with system
     qalculate-qt # Calculator
+    docker_29 #docker container
+    antigravity-fhs # google AI IDE
+    codex
   ];
 }

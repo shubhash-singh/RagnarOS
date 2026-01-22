@@ -12,6 +12,7 @@
 in {
   wayland.windowManager.hyprland = {
     settings = {
+      "$modifier" = "SUPER";
       exec-once = [
         "dbus-update-activation-environment --all --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -22,6 +23,7 @@ in {
         "lxqt-policykit-agent"
         "pypr &"
         "swaybg -i /home/${username}/Pictures/Wallpapers/iron_man.jpg"
+        "wl-paste --watch clipman store"
       ];
 
       input = {
@@ -40,7 +42,6 @@ in {
       };
 
       general = {
-        "$modifier" = "SUPER";
         layout = "dwindle";
         gaps_in = 0;
         gaps_out = 1;
