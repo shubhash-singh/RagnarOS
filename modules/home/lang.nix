@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     # pip files
 
-    (python311.withPackages (ps:
+    (python313.withPackages (ps:
       with ps; [
         markdown2
         numpy
@@ -14,7 +14,7 @@
         seaborn
         virtualenv
       ]))
-
+    wkhtmltopdf
     jdk #java
     mysql84 # MySQL
     mongodb-ce # MongoDB 

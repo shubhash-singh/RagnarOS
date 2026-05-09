@@ -51,8 +51,8 @@ in
           "clock" = {
             format =
               if clock24h == true
-              then '' {:L%H:%M}''
-              else '' {:L%I:%M %p}'';
+              then ''{:L%H:%M}''
+              else ''{:L%I:%M %p}'';
             tooltip = true;
             tooltip-format = "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>";
           };
@@ -79,7 +79,7 @@ in
           };
           # --- UPDATED NETWORK MODULE ---
           "network" = {
-            interval = 1; # Update every second for real-time speed
+            interval = 5; # Update every second for real-time speed
             format-icons = [
               "󰤯"
               "󰤟"
@@ -146,19 +146,19 @@ in
             tooltip = false;
             format = "{icon} {}";
             format-icons = {
-              notification = "<span foreground='#B22222'><sup></sup></span>";
-              none = "Bell";
-              "dnd-notification" = "<span foreground='#B22222'><sup></sup></span>";
-              "dnd-none" = "Bell";
-              "inhibited-notification" = "<span foreground='#B22222'><sup></sup></span>";
-              "inhibited-none" = "";
-              "dnd-inhibited-notification" = "<span foreground='#B22222'><sup></sup></span>";
-              "dnd-inhibited-none" = "🔔";
+              notification = "<span foreground='red'><sup></sup></span>";
+              none = "";
+              dnd-notification = "<span foreground='red'><sup></sup></span>";
+              dnd-none = "";
+              inhibited-notification = "<span foreground='red'><sup></sup></span>";
+              inhibited-none = "";
+              dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>";
+              dnd-inhibited-none = "";
             };
             return-type = "json";
             exec-if = "which swaync-client";
             exec = "swaync-client -swb";
-            on-click = "sleep 0.1 && task-waybar";
+            on-click = "sleep 0.1 && swaync-client -t -sw";
             escape = true;
           };
           "battery" = {
@@ -199,14 +199,14 @@ in
 
           /* --- Main Bar --- */
           window#waybar {
-            background: transparent; /* Transparent Background */
-            color: #CAD3F5;      /* Light Text */
+            background: transparent;
+            color: #CAD3F5;
           }
 
           /* --- Tooltips --- */
           tooltip {
             background: #0A0A0A;
-            border: 1px solid #B22222; /* Distressed red border */
+            border: 1px solid red; /* Distressed red border */
             border-radius: 12px;
           }
           tooltip label {
@@ -286,10 +286,23 @@ in
           #clock { color: #E0E0E0; }      /* Light gray clock */
           #cpu { color: #FF8C00; }        /* Orange CPU (embers) */
           #memory { color: #B22222; }    /* Distressed red memory */
-          #network { color: #E0E0E0; }    /* Light gray network */
+          #network { color: green; }    /* Light gray network */
           #battery.charging, #battery.plugged { color: #FFA500; } /* Orange charging (embers) */
           #battery.critical:not(.charging) { color: #B22222; }   /* Distressed red critical battery */
           #pulseaudio { color: #E0E0E0; } /* Light gray audio */
+          
+          /* --- Notification Specific Styles --- */
+          #custom-notification {
+            color: #E0E0E0;
+            font-size: 14px;
+          }
+          #custom-notification.notification,
+          #custom-notification.dnd-notification,
+          #custom-notification.inhibited-notification,
+          #custom-notification.dnd-inhibited-notification {
+            color: #FF6B6B;
+            background: rgba(178, 34, 34, 0.3);
+          }
         ''
       ];
     };

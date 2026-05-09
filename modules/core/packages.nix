@@ -78,14 +78,15 @@
     vlc
     libreoffice-qt6-fresh #for office tools
     chromium # chromium as browser
-    android-studio
+#   android-studio
     postman # used to test and debug API
     dbgate # for MySQL connectivity
-    vscode-fhs # Visual Studio Code
+#   vscode-fhs # Visual Studio Code
     droidcam # to connect phone camera with system
     qalculate-qt # Calculator
     docker_29 #docker container
     antigravity-fhs # google AI IDE
     codex
+    obsidian
   ];
 }
