@@ -68,7 +68,7 @@
 
     # System apps
     btop
-    neofetch
+    fastfetch
 
     # Custom Applications
     github-desktop
@@ -88,5 +88,6 @@
     antigravity-fhs # google AI IDE
     codex
     obsidian
+    anydesk
   ];
 }

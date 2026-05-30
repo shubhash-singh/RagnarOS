@@ -24,7 +24,7 @@ in
             "custom/notification"
           ];
           modules-left = [
-            "custom/startmenu"
+           #"custom/startmenu"
             "cpu"
             "memory"
             # Add "network" here if you want it on the left

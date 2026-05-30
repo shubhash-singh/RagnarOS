@@ -26,5 +26,6 @@
     jadx # apk reverse engineering
     xclicker # auto clicker
     autotrace # png to svg converter
+    ffmpeg
   ];
 }
