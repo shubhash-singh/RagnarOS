@@ -15,7 +15,7 @@
     ./kitty.nix
     ./lang.nix
     # ./nvf.nix
-    ./nvim
+#    ./nvim
     ./rofi
     ./qt.nix
     ./scripts
