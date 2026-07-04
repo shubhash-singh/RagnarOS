@@ -24,7 +24,7 @@ in {
       "$modifier,Q,killactive,"
       "$modifier,F,exec, thunar"
       "$modifier SHIFT, A, exec, android-studio"
-      "$modifier SHIFT,I,togglesplit,"
+      "$modifier SHIFT,I,layoutmsg,togglesplit"
       "$modifier SHIFT, P, exec, systemctl suspend"
       "$modifier SHIFT,F,togglefloating,"
       "$modifier SHIFT,L,exit,"

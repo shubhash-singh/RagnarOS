@@ -1,8 +1,8 @@
+{ pkgs, ... }:
+
 {
-  inputs, pkgs, ...
-}: {
   home.packages = [
-  inputs.nvim.packages.${pkgs.system}.default
+    pkgs.neovim
   ];
 
   home.sessionVariables = {

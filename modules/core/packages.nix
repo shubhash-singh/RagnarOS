@@ -15,7 +15,7 @@
 
     thunar = {
       enable = true;
-      plugins = with pkgs.xfce; [
+      plugins = with pkgs; [
         thunar-archive-plugin
         thunar-volman
       ];
@@ -49,7 +49,7 @@
     lshw # Detailed Hardware Information
     lxqt.lxqt-policykit # The Chosen Policy Kit / Polkit
     ncdu # Disk Usage Analyzer With Ncurses Interface
-    nixfmt-rfc-style # Nix Formatter
+    #nixfmt # Nix Formatter
     pavucontrol # For Editing Audio Levels & Devices
     pciutils # Collection Of Tools For Inspecting PCI Devices
     picard # For Changing Music Metadata & Getting Cover Art
@@ -78,10 +78,8 @@
     vlc
     libreoffice-qt6-fresh #for office tools
     chromium # chromium as browser
-#   android-studio
     postman # used to test and debug API
     dbgate # for MySQL connectivity
-#   vscode-fhs # Visual Studio Code
     droidcam # to connect phone camera with system
     qalculate-qt # Calculator
     docker_29 #docker container

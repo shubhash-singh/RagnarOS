@@ -18,14 +18,6 @@
     jdk #java
     mysql84 # MySQL
     mongodb-ce # MongoDB 
-    cmake
-    nodejs_24
-    jdt-language-server # for auto complete in java
-    maven # maven to build java project
-    apktool # apk reverse engineering
-    jadx # apk reverse engineering
     xclicker # auto clicker
-    autotrace # png to svg converter
-    ffmpeg
   ];
 }
