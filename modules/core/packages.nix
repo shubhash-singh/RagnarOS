@@ -60,10 +60,10 @@
     unrar # Tool For Handling .rar Files
     unzip # Tool For Handling .zip Files
     usbutils # Good Tools For USB Devices
-    virt-viewer # View Virtual Machines
+    #virt-viewer # View Virtual Machines
     wget # Tool For Fetching Files With Links
     yazi
-    zstd # used by python PyQt6 for GUI interface
+    #zstd # used by python PyQt6 for GUI interface
 
 
     # System apps
@@ -86,6 +86,7 @@
     antigravity-fhs # google AI IDE
     codex
     obsidian
-    anydesk
+    #code-cursor
+    neovim
   ];
 }
